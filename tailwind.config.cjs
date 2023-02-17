@@ -15,6 +15,8 @@ module.exports = {
       'hero-blue': '#4D5BCE',
       'teal': '#E99287',
       'cyan-green': '#43D9AD',
+      'font-secondary': '#E5E9F0',
+      'disabled': 'gray'
     },
   },
   plugins: [

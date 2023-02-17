@@ -10,3 +10,84 @@ html{
   display: block;
   bottom: -40px;
 } */
+
+.body
+{
+    background: url(../bg.jpg)no-repeat;
+    border-color: blueviolet;
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+/* SNAKE GAME  */
+.playArea {
+    width: 200px;
+    height: 440px;
+    background-color: #011627 !important;
+    backdrop-filter: saturate(0.5);
+    border-radius: 10px;
+
+  }
+  #fruit {
+    display: none;
+  }
+
+  .gameOver {
+    color: white;
+    font-size: 35px;
+  }
+  .playButton {
+    color: white;
+    background: #502c7b;
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 0.9em;
+    color: white;
+    box-shadow: 4px 4px 0px 0px white;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+  .scoreBox {
+    float: right;
+    margin: 30px;
+    margin-top: 50px;
+    --webkit-box-shadow: 0px 4px 13px 0px rgba(48, 26, 74, 0.63);
+    box-shadow: 0px 4px 13px 0px rgba(48, 26, 74, 0.63);
+  }
+  h2 {
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .bg-fade-top{
+    position: absolute;
+    background: #43D9AD;
+    width: 300px;
+    height: 103px;
+    filter: blur(100px);
+    top: 20px;
+    left: 0;
+  }
+  .bg-fade-bottom{
+    position: absolute;
+    background: #4D5BCE;
+    width: 300px;
+    height: 103px;
+    filter: blur(100px);
+    bottom: 20px;
+    right: 0;
+  }
+  .game-container-bg{
+    backdrop-filter: blur(63px);
+    background: #a9c0ff0d;
+    border-radius: 10px;
+  }
+  #fruit{
+    background-color: #43D9AD;
+  }

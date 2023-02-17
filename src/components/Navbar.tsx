@@ -6,7 +6,7 @@ const Navbar = () => {
             <header>
                 <nav className="grid grid-cols-6 border border-border-main ">
                     <div className='col-span-1 items-center self-center'>
-                        <h1 className='w-28 text-text-main '>dev-prabhat</h1>
+                        <h1 className='text-text-main text-center w-full'>dev-prabhat</h1>
                     </div>
                     <div className='col-span-4'>
                         <ul className='flex'>
