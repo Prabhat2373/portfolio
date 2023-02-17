@@ -9,12 +9,14 @@ function App() {
 
   return (
     <>
-      <Suspense fallback={<h1>Loading..</h1>}>
-        <Route>
-        
-        </Route>
-      </Suspense>
-
+      {/* <Suspense fallback={<h1>Loading..</h1>}> */}
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Hero />} />
+      </Routes>
+      {/* </Suspense> */}
+      {/* <Navbar />
+      <Hero /> */}
     </>
   )
 }
