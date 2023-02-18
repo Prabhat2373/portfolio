@@ -22,7 +22,11 @@ html{
     align-items: center;
     /* border: 2px solid black; */
 }
-
+section{
+  height: 90vh;
+  width: 100%;
+  
+}
 /* SNAKE GAME  */
 .playArea {
     width: 200px;

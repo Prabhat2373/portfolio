@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
     const path = useLocation().pathname;
@@ -14,8 +14,10 @@ const Navbar = () => {
                     </div>
                     <div className='col-span-4'>
                         <ul className='flex'>
-                            <li className={`flex justify-center items-center cursor-pointer text-white px-6 border border-border-main py-4 border-b-2 border-b-bg-main ${path === '/' ? 'border-b-yellow' : ''}`}><a href="">_hello</a></li>
-                            <li className='flex justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow'><a href="">_about-me</a></li>
+                            <li className={`flex justify-center items-center cursor-pointer text-white px-6 border border-border-main py-4 border-b-2 border-b-bg-main ${path === '/' ? 'border-b-yellow' : ''}`}><Link to="/">_hello</Link></li>
+                            <li className='flex justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow'>
+                                <Link to="/about">_about-me</Link>
+                                </li>
                             <li className='flex justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow'><a href="">_projects</a></li>
                         </ul>
                     </div>

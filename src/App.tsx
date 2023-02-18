@@ -2,8 +2,10 @@ import { Suspense, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+import Hero from './pages/Hero'
 import { Routes, Route } from "react-router-dom";
+import About from './pages/About'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -13,7 +15,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Hero />} />
+        <Route path='/about' element={<About />} />
       </Routes>
+      <Footer />
       {/* </Suspense> */}
       {/* <Navbar />
       <Hero /> */}
