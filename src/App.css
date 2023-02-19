@@ -95,3 +95,27 @@ section{
   #fruit{
     background-color: #43D9AD;
   }
+
+  /* SUMMARY */
+  .summary {
+    display: block;
+  }
+  
+  .summary::after {
+    /* margin-left: 1ch; */
+    position: relative;
+    top: -45px;
+    display: inline-block;
+    transition: 0.2s;
+    content: '\203A'; /* chevron */
+  }
+  
+  #bio-details[open] .summary::after {
+    transform: rotate(90deg);
+  }  
+  #interestDetails[open] .summary::after {
+    transform: rotate(90deg);
+  }
+  #educationDetails[open] .summary::after {
+    transform: rotate(90deg);
+  }
