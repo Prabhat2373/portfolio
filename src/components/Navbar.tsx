@@ -18,11 +18,11 @@ const Navbar = () => {
                             <li className='flex justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow'>
                                 <Link to="/about">_about-me</Link>
                                 </li>
-                            <li className='flex justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow'><a href="">_projects</a></li>
+                            <li className='flex justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow'><Link to="/projects">_projects</Link></li>
                         </ul>
                     </div>
                     <div className='py-4 px-6 border border-border-main'>
-                        <a className='text-text-main  ' href="">contact</a>
+                        <Link className='text-text-main  ' to="/contact">contact</Link>
                     </div>
                 </nav>
             </header>

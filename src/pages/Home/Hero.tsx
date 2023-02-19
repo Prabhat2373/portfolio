@@ -1,8 +1,8 @@
 import React from 'react'
-import TwitterIcon from '../components/icons/TwitterIcon'
-import FacebookIcon from '../components/icons/FacebookIcon'
-import GitHubIcon from '../components/icons/GitHubIcon'
-import SnakeGame from '../components/SnakeGame'
+import TwitterIcon from '../../components/icons/TwitterIcon'
+import FacebookIcon from '../../components/icons/FacebookIcon'
+import GitHubIcon from '../../components/icons/GitHubIcon'
+import SnakeGame from '../../components/SnakeGame'
 
 
 const Hero = () => {
@@ -30,7 +30,7 @@ const Hero = () => {
             <SnakeGame />
           </div>
         </div>
-       
+
       </section>
     </>
   )

@@ -8,6 +8,7 @@ module.exports = {
     extend: {},
     colors: {
       'bg-main': '#011627',
+      'bg-secondary':'#011221',
       'border-main': '#1E2D3D',
       'text-main': '#607B96',
       'white': '#ffffff',
@@ -16,7 +17,9 @@ module.exports = {
       'teal': '#E99287',
       'cyan-green': '#43D9AD',
       'font-secondary': '#E5E9F0',
-      'disabled': 'gray'
+      'disabled': 'gray',
+      'button-main':'#1C2B3A',
+
     },
   },
   plugins: [
