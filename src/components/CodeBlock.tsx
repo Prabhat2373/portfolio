@@ -1,27 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { CopyBlock } from "react-code-blocks";
 import Prism from 'prismjs';
 interface CodeBlockProps {
     code: any;
     language: string;
-    showLineNumbers: boolean;
     startingLineNumber?: number
 }
 // { code, language, showLineNumbers, startingLineNumber }: CodeBlockProps
 
-const CodeBlock = () => {
-    const code = `var data = 1;`;
+const CodeBlock = ({ language, code,  startingLineNumber }: CodeBlockProps) => {
+    // const code = `var data = 1;`;
     const html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
+    useEffect(() => {
+        Prism.highlightAll();
+    }, []);
     return (
         <>
-            {/* <CopyBlock
-                text={code}
-                language={language}
-                showLineNumbers={showLineNumbers}
-                startingLineNumber={startingLineNumber}
-                wrapLines
-            /> */}
-            <div>{html}</div>
+            <div className="Code border border-border-main bg-bg-secondary p-4 ">
+                <pre>
+                    <code className={`language-${language} `}>{code}</code>
+                </pre>
+            </div>
         </>
     )
 }

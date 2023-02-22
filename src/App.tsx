@@ -23,7 +23,7 @@ function App() {
         <Route path='/projects' element={<ProjectIndex />} />
         <Route path='/contact' element={<ContactIndex />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
       {/* </Suspense> */}
       {/* <Navbar />
       <Hero /> */}

@@ -3,6 +3,7 @@ import TwitterIcon from '../../components/icons/TwitterIcon'
 import FacebookIcon from '../../components/icons/FacebookIcon'
 import GitHubIcon from '../../components/icons/GitHubIcon'
 import SnakeGame from '../../components/SnakeGame'
+import Footer from '../../components/Footer'
 
 
 const Hero = () => {
@@ -32,6 +33,7 @@ const Hero = () => {
         </div>
 
       </section>
+      <Footer />
     </>
   )
 }

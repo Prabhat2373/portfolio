@@ -10,7 +10,14 @@ import ProjectCard from './ProjectCard'
 const ProjectContent = () => {
     return (
         <>
-            <div className="grid grid-cols-5">
+            <div className="grid grid-cols-3 gap-7 p-11">
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
                 <ProjectCard />
             </div>
         </>

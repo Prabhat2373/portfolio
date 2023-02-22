@@ -2,6 +2,7 @@ import React from 'react'
 import TwitterIcon from './icons/TwitterIcon'
 import FacebookIcon from './icons/FacebookIcon'
 import GitHubIcon from './icons/GitHubIcon'
+import LinkedInIcon from './icons/LinkedInIcon'
 
 const Footer = () => {
     return (
@@ -18,6 +19,9 @@ const Footer = () => {
                     </div>
                     <div className='border-r border-border-main px-6 py-4'>
                         <FacebookIcon />
+                    </div>
+                    <div className='border-r border-border-main px-6 py-4'>
+                        <LinkedInIcon />
                     </div>
                 </div>
                 <div className="flex items-center border-l border-border-main px-6 py-4">

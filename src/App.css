@@ -119,3 +119,22 @@ section{
   #educationDetails[open] .summary::after {
     transform: rotate(90deg);
   }
+
+  .keyword{
+    color: #FEA55F;
+  }
+  .operator{
+    color: pink;
+  }
+  .function{
+    color: palevioletred;
+  }
+  .language-javascript{
+    color: #607B96;
+  }
+  .constant{
+    color: #4D5BCE;
+  }
+  .punctuation{
+    color: #E99287;
+  }
