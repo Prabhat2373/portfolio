@@ -13,34 +13,6 @@ const AboutContent = () => {
             * quis nostrud exercitation ullamco laboris <br />
             * nisi ut aliquip ex ea commodo consequat. <br />
             * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
-            * <br />
-            * Duis aute irure dolor in reprehenderit in <br />
             * voluptate velit esse cillum dolore eu  <br />fugiat <br />
             * nulla pariatur. Excepteur sint occaecat <br />
             * officia deserunt mollit anim id est  <br />laborum. <br />

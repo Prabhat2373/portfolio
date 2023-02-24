@@ -21,7 +21,8 @@ module.exports = {
       'button-main': '#1C2B3A',
       'pink': '#C98BDF',
       'text-secondary': '#465E77',
-      'denger': 'red'
+      'denger': 'red',
+      'transparent': '#ffffff00'
 
     },
   },

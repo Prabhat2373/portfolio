@@ -17,7 +17,7 @@ interface PageProps {
 }
 const Page = ({ sidebarName, sidebarDetails, dataTabName, content }: PageProps) => {
   return (
-    <section className='grid grid-cols-12'>
+    <section className='grid grid-cols-12 relative top-[60px] md:static'>
       <div className="grid grid-flow-col col-span-2 border border-border-main">
         <div className="about-sidebar border border-border-main">
           <div className="flex gap-9 flex-col justify-center items-center pt-4">
@@ -58,38 +58,7 @@ const Page = ({ sidebarName, sidebarDetails, dataTabName, content }: PageProps) 
           {content}
         </div>
       </div>
-      <div className='grid col-span-12 text-text-main'>
-        <footer className="flex justify-between border-t border-t-border-main">
-          <div className="flex items-center ">
-            <div className='border-r border-border-main px-6 py-4' style={{
-              padding: ' 12px 20px 12px 60px'
-            }}>
-              find me in:
-            </div>
-            <div className='border-r border-border-main px-6 py-4' onClick={() => {
-              window.open('https://github.com/Prabhat2373', '_blank')
-            }}  >
-              <TwitterIcon />
-            </div>
-            <div className='border-r border-border-main px-6 py-4' onClick={() => {
-              window.open('https://github.com/Prabhat2373', '_blank')
-            }}>
-              <FacebookIcon />
-            </div>
-            <div className='border-r border-border-main px-6 py-4 cursor-pointer' onClick={() => {
-              window.open('https://github.com/Prabhat2373', '_blank')
-            }}>
-              <LinkedInIcon className="cursor-pointer" />
-            </div>
-          </div>
-          <div className="flex items-center border-l border-border-main px-6 py-4">
-            <div className='pr-2'>
-              @prabhat2373
-            </div>
-            <div> <GitHubIcon /></div>
-          </div>
-        </footer>
-      </div>
+
     </section>
   )
 }

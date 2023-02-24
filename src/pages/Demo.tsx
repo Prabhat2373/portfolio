@@ -9,10 +9,14 @@ import HobbiesIcon from '../components/icons/HobbiesIcon';
 import PersonalInfoIcon from '../components/icons/PersonalInfoIcon';
 import CodeIcon from '../components/icons/CodeIcon';
 import CloseIcon from '../components/icons/CloseIcon';
+import AboutPageContent from './About/PageContent';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 import { Link, useLocation } from 'react-router-dom';
 import CloseMenuIcon from '../components/icons/CloseMenuIcon';
 import HamburgerIcon from '../components/icons/HamburgerIcon';
 import FileIcon from '../components/icons/FileIcon';
+import ProjectContent from './Projects/ProjectContent';
 type LayoutProps = {
   tabName: string;
   sidebarTitle1: string;
@@ -36,11 +40,11 @@ const Layout = ({
       <div className="wrapper text-white">
         <header className="main-head">
           <nav
-            className={`md:relative w-full h-full md:grid grid-cols-6 border border-border-main ${
-              isOpen ? 'absolute z-30 bg-bg-main ' : 'bg-transparent z-0'
+            className={`absolute md:relative w-full h-full md:grid grid-cols-6 border border-border-main bg-bg-main  md:bg-transparent ${
+              isOpen ? 'bg-transparent z-0' : 'z-10'
             }`}
           >
-            <div className="md:col-span-1 items-center md:self-center flex justify-between p-4 border-r border-r-border-main">
+            <div className="md:col-span-1 items-center md:self-center flex justify-between p-5 border-b border-b-border-main">
               <h1 className="text-text-main text-left md:text-center w-full ">
                 dev-prabhat
               </h1>
@@ -50,14 +54,14 @@ const Layout = ({
                   setIsOpen((prev) => !prev);
                 }}
               >
-                {isOpen ? <CloseMenuIcon /> : <HamburgerIcon />}
+                {!isOpen ? <CloseMenuIcon /> : <HamburgerIcon />}
               </div>
             </div>
             {isOpen && (
               <>
                 <div
-                  className={`col-span-4 transition-all duration-300 md:hidden ${
-                    isOpen ? '' : 'hidden'
+                  className={`col-span-4 transition-all duration-300 ${
+                    isOpen ? 'hidden' : ''
                   }`}
                 >
                   <ul className="flex flex-col md:flex-row justify-start ">
@@ -84,10 +88,10 @@ const Layout = ({
                     </li>
                     <li
                       className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                        path === '/contact' ? 'border-b-yellow text-white' : ''
+                        path === '/demo' ? 'border-b-yellow text-white' : ''
                       }`}
                     >
-                      <Link to="/contact">_contact</Link>
+                      <Link to="/demo">_demo</Link>
                     </li>
                   </ul>
                   <div>
@@ -155,8 +159,15 @@ const Layout = ({
                 >
                   <Link to="/projects">_projects</Link>
                 </li>
+                <li
+                  className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
+                    path === '/demo' ? 'border-b-yellow text-white' : ''
+                  }`}
+                >
+                  <Link to="/demo">_demo</Link>
+                </li>
               </ul>
-              <div className="md:hidden">
+              <div>
                 <footer className="hero-footer bg-bg-main border border-border-main h-[56px]  md:hidden flex justify-between text-text-main absolute bottom-0 w-full ">
                   <div className="flex items-center ">
                     <div className="border-r border-border-main px-6 py-4">
@@ -194,7 +205,7 @@ const Layout = ({
             </div>
           </nav>
         </header>
-        <div className="side-bar hidden md:grid">
+        <div className="side-bar">
           <div className="grid grid-flow-col col-span-2 border border-border-main h-full">
             <div className="about-sidebar border border-border-main">
               <div className="flex gap-9 flex-col justify-center items-center pt-4">
@@ -314,7 +325,7 @@ const Layout = ({
         </div>
 
         {/* FOOTER  */}
-        <div className="main-footer border-t border-t-border-main hidden md:block">
+        <div className="main-footer border-t border-t-border-main">
           <footer className="flex justify-between">
             <div className="flex items-center ">
               <div className="border-r border-border-main px-6 py-4">

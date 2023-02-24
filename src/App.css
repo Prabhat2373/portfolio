@@ -1,4 +1,4 @@
-html{
+html {
   background-color: #011627;
 }
 /* .active::before{
@@ -10,131 +10,350 @@ html{
   display: block;
   bottom: -40px;
 } */
-
-.body
-{
-    background: url(../bg.jpg)no-repeat;
-    border-color: blueviolet;
-    min-height: 100vh;
-    background-size: 100vw 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid black; */
+#root {
+  height: 100%;
 }
-section{
-  height: 90vh;
-  width: 100%;
-  
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+.body {
+  background: url(../bg.jpg) no-repeat;
+  border-color: blueviolet;
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+section {
+  display: grid;
+  /* grid-template-rows: repeat(15, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(15, minmax(0, 1fr)) !important; */
 }
 /* SNAKE GAME  */
 .playArea {
-    width: 200px;
-    height: 440px;
-    background-color: #011627 !important;
-    backdrop-filter: saturate(0.5);
-    border-radius: 10px;
+  width: 200px;
+  height: 440px;
+  background-color: #011627 !important;
+  backdrop-filter: saturate(0.5);
+  border-radius: 10px;
+}
+#fruit {
+  display: none;
+}
 
-  }
-  #fruit {
-    display: none;
-  }
+.gameOver {
+  color: white;
+  font-size: 35px;
+}
+.playButton {
+  color: white;
+  background: #502c7b;
+  border: 2px solid white;
+  padding: 10px;
+  font-size: 0.9em;
+  color: white;
+  box-shadow: 4px 4px 0px 0px white;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.scoreBox {
+  float: right;
+  margin: 30px;
+  margin-top: 50px;
+  --webkit-box-shadow: 0px 4px 13px 0px rgba(48, 26, 74, 0.63);
+  box-shadow: 0px 4px 13px 0px rgba(48, 26, 74, 0.63);
+}
+h2 {
+  font-size: 18px;
+  padding: 10px;
+}
 
-  .gameOver {
-    color: white;
-    font-size: 35px;
-  }
-  .playButton {
-    color: white;
-    background: #502c7b;
-    border: 2px solid white;
-    padding: 10px;
-    font-size: 0.9em;
-    color: white;
-    box-shadow: 4px 4px 0px 0px white;
-    font-family: 'Press Start 2P', cursive;
-    font-weight: 700;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-  }
-  .scoreBox {
-    float: right;
-    margin: 30px;
-    margin-top: 50px;
-    --webkit-box-shadow: 0px 4px 13px 0px rgba(48, 26, 74, 0.63);
-    box-shadow: 0px 4px 13px 0px rgba(48, 26, 74, 0.63);
-  }
-  h2 {
-    font-size: 18px;
-    padding: 10px;
-  }
-  
-  .bg-fade-top{
-    position: absolute;
-    background: #43D9AD;
-    width: 300px;
-    height: 103px;
-    filter: blur(100px);
-    top: 20px;
+.bg-fade-top {
+  position: absolute;
+  background: #43d9ad;
+  width: 300px;
+  height: 103px;
+  filter: blur(100px);
+  top: 20px;
+  left: 0;
+}
+.bg-fade-bottom {
+  position: absolute;
+  background: #4d5bce;
+  width: 300px;
+  height: 103px;
+  filter: blur(100px);
+  bottom: 20px;
+  right: 0;
+}
+.game-container-bg {
+  backdrop-filter: blur(63px);
+  background: #a9c0ff0d;
+  border-radius: 10px;
+}
+#fruit {
+  background-color: #43d9ad;
+}
+
+/* SUMMARY */
+.summary {
+  display: block;
+}
+
+.summary::after {
+  /* margin-left: 1ch; */
+  position: relative;
+  top: -45px;
+  display: inline-block;
+  transition: 0.2s;
+  content: '\203A'; /* chevron */
+}
+
+#bio-details[open] .summary::after {
+  transform: rotate(90deg);
+}
+#interestDetails[open] .summary::after {
+  transform: rotate(90deg);
+}
+#educationDetails[open] .summary::after {
+  transform: rotate(90deg);
+}
+
+.keyword {
+  color: #fea55f;
+}
+.operator {
+  color: pink;
+}
+.function {
+  color: palevioletred;
+}
+.language-javascript {
+  color: #607b96;
+}
+.constant {
+  color: #4d5bce;
+}
+.punctuation {
+  color: #e99287;
+}
+/* 
+  .wrapper {
+    position: fixed;
+    top: 60px;
     left: 0;
-  }
-  .bg-fade-bottom{
-    position: absolute;
-    background: #4D5BCE;
-    width: 300px;
-    height: 103px;
-    filter: blur(100px);
-    bottom: 20px;
     right: 0;
-  }
-  .game-container-bg{
-    backdrop-filter: blur(63px);
-    background: #a9c0ff0d;
-    border-radius: 10px;
-  }
-  #fruit{
-    background-color: #43D9AD;
-  }
+    bottom: 0;
+    border: 2px solid white;
+    display: grid;
+    border-style: solid;
+    border-color: red;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    height: 100%;
+  } */
+.one {
+  border-style: solid;
+  border-color: blue;
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.two {
+  border-style: solid;
+  border-color: yellow;
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.three {
+  border-style: solid;
+  border-color: violet;
+  grid-row: 2 / 5;
+  grid-column: 1;
+}
+.four {
+  border-style: solid;
+  border-color: aqua;
+  grid-column: 3;
+  grid-row: 3;
+}
+.five {
+  border-style: solid;
+  border-color: green;
+  grid-column: 2;
+  grid-row: 4;
+}
+.six {
+  border-style: solid;
+  border-color: purple;
+  grid-column: 3;
+  grid-row: 4;
+}
 
-  /* SUMMARY */
-  .summary {
-    display: block;
-  }
-  
-  .summary::after {
-    /* margin-left: 1ch; */
-    position: relative;
-    top: -45px;
-    display: inline-block;
-    transition: 0.2s;
-    content: '\203A'; /* chevron */
-  }
-  
-  #bio-details[open] .summary::after {
-    transform: rotate(90deg);
-  }  
-  #interestDetails[open] .summary::after {
-    transform: rotate(90deg);
-  }
-  #educationDetails[open] .summary::after {
-    transform: rotate(90deg);
-  }
+/* GRID  */
+#main-container {
+  background-color: bisque;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
 
-  .keyword{
-    color: #FEA55F;
+.col-1 {
+  display: grid;
+  overflow: auto;
+  grid-template-rows: 1fr 1fr;
+}
+
+.row-1 {
+  background-color: cadetblue;
+  overflow: auto;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.row-1-1 {
+  background-color: crimson;
+  overflow: auto;
+}
+
+.row-1-2 {
+  background-color: darkkhaki;
+  overflow: auto;
+}
+
+.col-2 {
+  display: grid;
+  grid-template-rows: 90px 1fr 90px;
+  overflow: auto;
+}
+
+.row-2 {
+  background-color: chocolate;
+  overflow: auto;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.row-2-1 {
+  background-color: darkmagenta;
+  overflow: auto;
+}
+
+.row-2-2 {
+  background-color: darkslateblue;
+  overflow: auto;
+}
+
+.row-3 {
+  background-color: darkturquoise;
+}
+
+.row-4 {
+  background-color: firebrick;
+  display: grid;
+  grid-template-rows: 1fr;
+  overflow: auto;
+}
+
+.row-4-1 {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 1fr;
+  overflow: auto;
+}
+
+.row-5 {
+  background-color: fuchsia;
+}
+
+.text-editor {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: auto;
+}
+
+.toolbar {
+  background-color: black;
+  color: white;
+}
+
+.content {
+  /* background-color: wheat; */
+  overflow: auto;
+}
+
+/* .test-height {
+    height: 1000px;
+  } */
+
+.main-head {
+  grid-area: header;
+}
+.content {
+  grid-area: content;
+}
+.main-nav {
+  grid-area: nav;
+}
+.side {
+  grid-area: sidebar;
+}
+.ad {
+  grid-area: ad;
+}
+.main-footer {
+  grid-area: footer;
+}
+
+.wrapper {
+  display: grid;
+  /* gap: 20px; */
+  grid-template-areas:
+    'header'
+    'nav'
+    'content'
+    'footer';
+  height: 100%;
+  /* border: 2px solid white; */
+  /* grid-template-rows: 1fr 10fr 1fr; */
+}
+
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header '
+        'content'
+        'footer';
   }
-  .operator{
-    color: pink;
+  nav ul {
+    display: flex;
+    justify-content: space-between;
   }
-  .function{
-    color: palevioletred;
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+      'header header  header'
+      'nav content content'
+      'footer footer footer';
   }
-  .language-javascript{
-    color: #607B96;
+  nav ul {
+    flex-direction: column;
   }
-  .constant{
-    color: #4D5BCE;
-  }
-  .punctuation{
-    color: #E99287;
-  }
+}
+
+
+.language-javascript{
+  display: flex;
+  flex-wrap: wrap;
+}
