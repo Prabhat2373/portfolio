@@ -188,7 +188,12 @@ const Layout = ({
             <div
               className={`py-4 px-6 border border-border-main transition-all duration-300 hidden md:block`}
             >
-              <Link className="text-text-main  " to="/contact">
+              <Link
+                className={`text-text-main hover:border-b-yellow ${
+                  path === '/contact' ? 'border-b-yellow text-white' : ''
+                }`}
+                to="/contact"
+              >
                 contact
               </Link>
             </div>
