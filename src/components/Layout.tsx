@@ -90,10 +90,10 @@ const Layout = ({
                       <Link to="/contact">_contact</Link>
                     </li>
                   </ul>
-                  <div>
-                    <footer className="hero-footer bg-bg-main border border-border-main h-[56px]  md:hidden flex justify-between text-text-main absolute bottom-0 w-full ">
+                  {/* <div>
+                    <footer className="hero-footer bg-bg-main border border-border-main  md:hidden flex justify-between text-text-main absolute bottom-0 w-full ">
                       <div className="flex items-center ">
-                        <div className="border-r border-border-main px-6 py-4">
+                        <div className="border-r border-border-main px-6 py-4 hidden sm:block">
                           find me in:
                         </div>
                         <div className="hidden md:block border-r border-border-main px-6 py-4">
@@ -117,7 +117,7 @@ const Layout = ({
                         </div>
                       </div>
                     </footer>
-                  </div>
+                  </div> */}
                 </div>
                 <div
                   className={`py-4 px-6 border border-border-main transition-all duration-300 ${
@@ -156,34 +156,6 @@ const Layout = ({
                   <Link to="/projects">_projects</Link>
                 </li>
               </ul>
-              <div className="md:hidden">
-                <footer className="hero-footer bg-bg-main border border-border-main h-[56px]  md:hidden flex justify-between text-text-main absolute bottom-0 w-full ">
-                  <div className="flex items-center ">
-                    <div className="border-r border-border-main px-6 py-4">
-                      find me in:
-                    </div>
-                    <div className="hidden md:block border-r border-border-main px-6 py-4">
-                      <TwitterIcon />
-                    </div>
-                    <div className="border-r border-border-main px-6 py-4">
-                      <FacebookIcon />
-                    </div>
-                    <div className="border-r border-border-main px-6 py-4">
-                      <LinkedInIcon />
-                    </div>
-                  </div>
-                  <div className="flex items-center border-l border-border-main px-6 py-4">
-                    <div className="pr-2 hidden md:block">@prabhat2373</div>
-                    <div className="hidden md:hidden border-r border-border-main px-6 py-4">
-                      <TwitterIcon />
-                    </div>
-                    <div>
-                      {' '}
-                      <GitHubIcon />
-                    </div>
-                  </div>
-                </footer>
-              </div>
             </div>
             <div
               className={`py-4 px-6 border border-border-main transition-all duration-300 hidden md:block`}
@@ -319,24 +291,34 @@ const Layout = ({
         </div>
 
         {/* FOOTER  */}
-        <div className="main-footer border-t border-t-border-main hidden md:block">
+        <div className="main-footer border-t border-t-border-main ">
           <footer className="flex justify-between">
             <div className="flex items-center ">
-              <div className="border-r border-border-main px-6 py-4">
+              <div className="border-r border-border-main px-6 py-4 hidden sm:block">
                 find me in:
-              </div>
-              <div className="border-r border-border-main px-6 py-4">
-                <TwitterIcon />
               </div>
               <div className="border-r border-border-main px-6 py-4">
                 <FacebookIcon />
               </div>
-              <div className="border-r border-border-main px-6 py-4">
+              <div
+                className="border-r border-border-main px-6 py-4 cursor-pointer"
+                onClick={() => {
+                  window.open(
+                    'https://www.linkedin.com/in/prabhat-tambe-a4125421b/',
+                    '_blank'
+                  );
+                }}
+              >
                 <LinkedInIcon />
               </div>
             </div>
-            <div className="flex items-center border-l border-border-main px-6 py-4">
-              <div className="pr-2">@prabhat2373</div>
+            <div
+              className="flex items-center border-l border-border-main px-6 py-4 cursor-pointer"
+              onClick={() => {
+                window.open('https://www.github.com/prabhat2373', '_blank');
+              }}
+            >
+              <div className="pr-2 hidden sm:block">@prabhat2373</div>
               <div>
                 {' '}
                 <GitHubIcon />

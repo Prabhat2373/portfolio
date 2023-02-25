@@ -18,11 +18,11 @@ const Navbar = () => {
     <>
       <header>
         <nav
-          className={`absolute md:relative w-full h-full md:grid grid-cols-6 border border-border-main bg-bg-main  md:bg-transparent ${
-            isOpen ? 'z-10' : ' bg-transparent z-0'
+          className={`md:relative w-full h-full md:grid grid-cols-6 border border-border-main ${
+            isOpen ? 'absolute z-30 bg-bg-main ' : 'bg-transparent z-0'
           }`}
         >
-          <div className="md:col-span-1 items-center md:self-center flex justify-between p-0 border-r border-r-border-main">
+          <div className="md:col-span-1 items-center md:self-center flex justify-between p-4 border-r border-r-border-main">
             <h1 className="text-text-main text-left md:text-center w-full ">
               dev-prabhat
             </h1>
@@ -38,8 +38,8 @@ const Navbar = () => {
           {isOpen && (
             <>
               <div
-                className={`col-span-4 transition-all duration-300 ${
-                  !isOpen ? 'hidden' : ''
+                className={`col-span-4 transition-all duration-300 md:hidden ${
+                  isOpen ? '' : 'hidden'
                 }`}
               >
                 <ul className="flex flex-col md:flex-row justify-start ">
@@ -71,16 +71,9 @@ const Navbar = () => {
                   >
                     <Link to="/contact">_contact</Link>
                   </li>
-                  {/* <li
-                      className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                        path === '/demo' ? 'border-b-yellow text-white' : ''
-                      }`}
-                    >
-                      <Link to="/demo">_demo</Link>
-                    </li> */}
                 </ul>
                 <div>
-                  <footer className="hero-footer bg-bg-main border border-border-main h-[56px]  md:hidden flex justify-between text-text-main absolute bottom-0 w-full ">
+                  <footer className="hero-footer bg-bg-main border border-border-main  md:hidden flex justify-between text-text-main absolute bottom-0 w-full ">
                     <div className="flex items-center ">
                       <div className="border-r border-border-main px-6 py-4">
                         find me in:
@@ -144,16 +137,9 @@ const Navbar = () => {
               >
                 <Link to="/projects">_projects</Link>
               </li>
-              {/* <li
-                  className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                    path === '/demo' ? 'border-b-yellow text-white' : ''
-                  }`}
-                >
-                  <Link to="/demo">_demo</Link>
-                </li> */}
             </ul>
-            <div>
-              <footer className="hero-footer bg-bg-main border border-border-main h-[56px]  md:hidden flex justify-between text-text-main absolute bottom-0 w-full ">
+            <div className="md:hidden">
+              <footer className="hero-footer bg-bg-main border border-border-main md:hidden flex justify-between text-text-main absolute bottom-0 w-full ">
                 <div className="flex items-center ">
                   <div className="border-r border-border-main px-6 py-4">
                     find me in:
@@ -184,7 +170,12 @@ const Navbar = () => {
           <div
             className={`py-4 px-6 border border-border-main transition-all duration-300 hidden md:block`}
           >
-            <Link className="text-text-main  " to="/contact">
+            <Link
+              className={`text-text-main hover:border-b-yellow ${
+                path === '/contact' ? 'border-b-yellow text-white' : ''
+              }`}
+              to="/contact"
+            >
               contact
             </Link>
           </div>

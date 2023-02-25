@@ -7,9 +7,9 @@ import LinkedInIcon from './icons/LinkedInIcon';
 const Footer = () => {
   return (
     <>
-      <footer className="hero-footer bg-bg-main border border-border-main h-[56px] hidden md:flex justify-between text-text-main absolute bottom-0 w-full ">
+      <footer className="hero-footer bg-bg-main border border-border-main hidden md:flex justify-between text-text-main absolute bottom-0 w-full ">
         <div className="flex items-center ">
-          <div className="border-r border-border-main px-6 py-4">
+          <div className="border-r border-border-main px-6 py-4 ">
             find me in:
           </div>
           <div className="border-r border-border-main px-6 py-4">

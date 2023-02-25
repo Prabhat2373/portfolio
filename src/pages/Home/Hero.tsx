@@ -14,22 +14,22 @@ const Hero = () => {
         <div className="main grid grid-cols-1 lg:grid-cols-2 h-full ">
           <div className="flex justify-center lg:justify-end ">
             <div className="flex justify-center items-baseline flex-col relative top-[60px] md:static p-4">
-              <div
+              {/* <div
                 className="bg-fade-top lg:hidden"
                 style={{ top: '172px', position: 'relative' }}
               ></div>
               <div
                 className="bg-fade-bottom lg:hidden"
                 style={{ top: '196px', position: 'relative', left: '148px' }}
-              ></div>
+              ></div> */}
               <div>
-                <h3 className="font-medium text-font-secondary text-lg">
+                <h3 className="font-medium text-font-secondary text-lg ">
                   Hi all. I am
                 </h3>
-                <h1 className="font-medium text-font-secondary text-6xl ">
+                <h1 className="font-medium text-font-secondary text-3xl sm:text-6xl ">
                   Prabhat Tambe
                 </h1>
-                <h1 className="text-hero-blue font-semibold text-3xl">
+                <h1 className="text-hero-blue font-semibold text-2xl sm:text-3xl">
                   {'>'} Front-end developer
                 </h1>
               </div>

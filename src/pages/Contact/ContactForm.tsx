@@ -24,7 +24,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="grid grid-cols-2 -my-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 -my-20">
         <div className="flex justify-center items-center border-r border-r-border-main h-[100vh]">
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -76,7 +76,7 @@ export default function ContactForm() {
             </div>
           </form>
         </div>
-        <div className="text-text-main flex flex-col justify-center items-center h-full">
+        <div className="text-text-main hidden md:flex flex-col justify-center items-center h-full ">
           <div className="form-message flex">
             <ul>
               <li className="list-decimal">
