@@ -151,15 +151,15 @@ const Layout = ({
           </nav>
         </header>
         <div className="side-bar hidden md:grid">
-          <div className="grid grid-flow-col col-span-2 border border-border-main h-full">
-            <div className="about-sidebar border border-border-main">
+          <div className="grid grid-flow-col grid-cols-4 col-span-2 border border-border-main h-full">
+            <div className="about-sidebar border border-border-main p-5 col-span-1">
               <div className="flex gap-9 flex-col justify-center items-center pt-4">
                 <CodeIcon className="cursor-pointer" />
                 <PersonalInfoIcon className="cursor-pointer" />
                 <HobbiesIcon className="cursor-pointer" />
               </div>
             </div>
-            <div className=" border-border-main">
+            <div className=" border-border-main col-span-3">
               <div className="grid">
                 <details className="text-white">
                   <summary className="border-b-2 border-border-main px-4 py-3">

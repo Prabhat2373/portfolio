@@ -2,7 +2,9 @@ import React from 'react'
 
 const ProjectSidebar = () => {
   return (
-    <div>ProjectSidebar</div>
+    <div>
+      <input type="checkbox" />
+    </div>
   )
 }
 
