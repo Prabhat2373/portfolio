@@ -62,6 +62,7 @@ const Layout = ({
                 >
                   <ul className="flex flex-col md:flex-row justify-start ">
                     <li
+                      onClick={() => setIsOpen(false)}
                       className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                         path === '/' ? 'border-b-yellow text-white' : ''
                       }`}
@@ -69,6 +70,7 @@ const Layout = ({
                       <Link to="/">_hello</Link>
                     </li>
                     <li
+                      onClick={() => setIsOpen(false)}
                       className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                         path === '/about' ? 'border-b-yellow text-white' : ''
                       }`}
@@ -76,6 +78,7 @@ const Layout = ({
                       <Link to="/about">_about-me</Link>
                     </li>
                     <li
+                      onClick={() => setIsOpen(false)}
                       className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                         path === '/projects' ? 'border-b-yellow text-white' : ''
                       }`}
@@ -83,6 +86,7 @@ const Layout = ({
                       <Link to="/projects">_projects</Link>
                     </li>
                     <li
+                      onClick={() => setIsOpen(false)}
                       className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                         path === '/contact' ? 'border-b-yellow text-white' : ''
                       }`}
@@ -90,34 +94,6 @@ const Layout = ({
                       <Link to="/contact">_contact</Link>
                     </li>
                   </ul>
-                  {/* <div>
-                    <footer className="hero-footer bg-bg-main border border-border-main  md:hidden flex justify-between text-text-main absolute bottom-0 w-full ">
-                      <div className="flex items-center ">
-                        <div className="border-r border-border-main px-6 py-4 hidden sm:block">
-                          find me in:
-                        </div>
-                        <div className="hidden md:block border-r border-border-main px-6 py-4">
-                          <TwitterIcon />
-                        </div>
-                        <div className="border-r border-border-main px-6 py-4">
-                          <FacebookIcon />
-                        </div>
-                        <div className="border-r border-border-main px-6 py-4">
-                          <LinkedInIcon />
-                        </div>
-                      </div>
-                      <div className="flex items-center border-l border-border-main px-6 py-4">
-                        <div className="pr-2 hidden md:block">@prabhat2373</div>
-                        <div className="hidden md:hidden border-r border-border-main px-6 py-4">
-                          <TwitterIcon />
-                        </div>
-                        <div>
-                          {' '}
-                          <GitHubIcon />
-                        </div>
-                      </div>
-                    </footer>
-                  </div> */}
                 </div>
                 <div
                   className={`py-4 px-6 border border-border-main transition-all duration-300 ${
@@ -135,6 +111,7 @@ const Layout = ({
             >
               <ul className="flex flex-col md:flex-row justify-start">
                 <li
+                  onClick={() => setIsOpen(false)}
                   className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                     path === '/' ? 'border-b-yellow text-white' : ''
                   }`}
@@ -142,6 +119,7 @@ const Layout = ({
                   <Link to="/">_hello</Link>
                 </li>
                 <li
+                  onClick={() => setIsOpen(false)}
                   className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                     path === '/about' ? 'border-b-yellow text-white' : ''
                   }`}
@@ -149,6 +127,7 @@ const Layout = ({
                   <Link to="/about">_about-me</Link>
                 </li>
                 <li
+                  onClick={() => setIsOpen(false)}
                   className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                     path === '/projects' ? 'border-b-yellow text-white' : ''
                   }`}
@@ -279,7 +258,7 @@ const Layout = ({
         <div className="content">
           {/* <AboutPageContent /> */}
           <div className="top-bar border flex justify-start   border-border-main h-[50px] sticky top-0 z-10  backdrop-blur-3xl">
-            <div className="flex border-r border-r-border-main w-[50%] h-full justify-start px-6 items-center gap-4">
+            <div className="flex border-r border-r-border-main w-auto h-full justify-start px-6 items-center gap-4 relative">
               <span>{tabName ?? ''}</span>
               <span className="cursor-pointer">
                 <CloseIcon />

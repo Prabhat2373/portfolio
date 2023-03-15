@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 interface IFormInputs {
@@ -15,66 +15,92 @@ export default function ContactForm() {
     handleSubmit,
   } = useForm<IFormInputs>(); // you can supply default value as second argument
   const watchAllFields = watch(); // when pass nothing as argument, you are watching everything
-  const watchFields = watch(['name', 'email', 'message']); // you can also target specific fields by their names
-
-  const onSubmit = (data: IFormInputs) => {
-    alert(JSON.stringify(data));
+  // you can also target specific fields by their names
+  const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
+  const onSubmit = async (data: IFormInputs) => {
     console.log(data);
+    const response = await fetch('http://localhost:8000/contact', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    if (response.status === 200) setIsFormSubmitted(true);
+    else {
+      alert('something went wrong!');
+    }
   };
 
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 -my-20">
         <div className="flex justify-center items-center border-r border-r-border-main h-[100vh]">
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col text-text-main gap-4 w-[65%]"
-          >
-            <div className="flex flex-col">
-              <label className="text-text-main pb-2">_name:</label>
-              <input
-                type="text"
-                className="bg-bg-secondary border border-border-main px-4 py-2 hover:border  hover:border-text-main outline-none text-text-secondary rounded-lg "
-                {...register('name', { required: true, maxLength: 50 })}
-                placeholder="Enter Name"
-              />
-              {errors.name && (
-                <p className="text-denger">{'Name is required'}</p>
-              )}
-            </div>
-            <div className="flex flex-col">
-              <label>email</label>
-              <input
-                type="email"
-                {...register('email')}
-                className="bg-bg-secondary border border-border-main px-4 py-2 hover:border  hover:border-text-main outline-none text-text-secondary rounded-lg "
-                placeholder="Enter Email"
-              />
-              {errors.name && (
-                <p className="text-denger">
-                  {'Email is required and Enter valid email'}
+          {isFormSubmitted ? (
+            <div className="flex justify-center w-[70%]">
+              <div className="flex flex-col items-center gap-6">
+                <h1 className="text-white">Thank you! 🤘</h1>
+                <p className="text-text-main">
+                  Your message has been accepted. You will recieve answer really
+                  soon!
                 </p>
-              )}
+                <button
+                  className="border px-4 py-3 rounded-lg cursor-pointer"
+                  onClick={() => setIsFormSubmitted((prev) => !prev)}
+                >
+                  send-new-message
+                </button>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <label>message</label>
-              <textarea
-                rows={5}
-                {...register('message')}
-                className="bg-bg-secondary border border-border-main px-4 py-2 hover:border  hover:border-text-main outline-none text-text-secondary rounded-lg "
-                placeholder="Enter Message"
-              />
-              {errors.message && <p>{'Enter your message please'}</p>}
-            </div>
+          ) : (
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="flex flex-col text-text-main gap-4 w-[65%]"
+            >
+              <div className="flex flex-col">
+                <label className="text-text-main pb-2">_name:</label>
+                <input
+                  type="text"
+                  className="bg-bg-secondary border border-border-main px-4 py-2 hover:border  hover:border-text-main outline-none text-text-secondary rounded-lg "
+                  {...register('name', { required: true, maxLength: 50 })}
+                  placeholder="Enter Name"
+                />
+                {errors.name && (
+                  <p className="text-denger">{'Name is required'}</p>
+                )}
+              </div>
+              <div className="flex flex-col">
+                <label>email</label>
+                <input
+                  type="email"
+                  {...register('email')}
+                  className="bg-bg-secondary border border-border-main px-4 py-2 hover:border  hover:border-text-main outline-none text-text-secondary rounded-lg "
+                  placeholder="Enter Email"
+                />
+                {errors.name && (
+                  <p className="text-denger">
+                    {'Email is required and Enter valid email'}
+                  </p>
+                )}
+              </div>
+              <div className="flex flex-col">
+                <label>message</label>
+                <textarea
+                  rows={5}
+                  {...register('message')}
+                  className="bg-bg-secondary border border-border-main px-4 py-2 hover:border  hover:border-text-main outline-none text-text-secondary rounded-lg "
+                  placeholder="Enter Message"
+                />
+                {errors.message && <p>{'Enter your message please'}</p>}
+              </div>
 
-            <div className="pt-6">
-              <input
-                type="submit"
-                value={'submit-message'}
-                className="border px-4 py-3 rounded-lg cursor-pointer"
-              />
-            </div>
-          </form>
+              <div className="pt-6">
+                <input
+                  type="submit"
+                  value={'submit-message'}
+                  className="border px-4 py-3 rounded-lg cursor-pointer"
+                />
+              </div>
+            </form>
+          )}
         </div>
         <div className="text-text-main hidden md:flex flex-col justify-center items-center h-full ">
           <div className="form-message flex">

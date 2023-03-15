@@ -30,7 +30,7 @@ const Hero = () => {
                   Prabhat Tambe
                 </h1>
                 <h1 className="text-hero-blue font-semibold text-2xl sm:text-3xl">
-                  {'>'} Front-end developer
+                  <span className="blink">{'>'}</span> Front-end developer
                 </h1>
               </div>
               <div className="pt-20">

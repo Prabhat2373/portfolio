@@ -44,6 +44,7 @@ const Navbar = () => {
               >
                 <ul className="flex flex-col md:flex-row justify-start ">
                   <li
+                    onClick={() => setIsOpen(false)}
                     className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                       path === '/' ? 'border-b-yellow text-white' : ''
                     }`}
@@ -51,6 +52,7 @@ const Navbar = () => {
                     <Link to="/">_hello</Link>
                   </li>
                   <li
+                    onClick={() => setIsOpen(false)}
                     className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                       path === '/about' ? 'border-b-yellow text-white' : ''
                     }`}
@@ -58,6 +60,7 @@ const Navbar = () => {
                     <Link to="/about">_about-me</Link>
                   </li>
                   <li
+                    onClick={() => setIsOpen(false)}
                     className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                       path === '/projects' ? 'border-b-yellow text-white' : ''
                     }`}
@@ -65,6 +68,7 @@ const Navbar = () => {
                     <Link to="/projects">_projects</Link>
                   </li>
                   <li
+                    onClick={() => setIsOpen(false)}
                     className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
                       path === '/contact' ? 'border-b-yellow text-white' : ''
                     }`}
