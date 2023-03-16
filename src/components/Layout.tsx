@@ -150,9 +150,9 @@ const Layout = ({
             </div>
           </nav>
         </header>
-        <div className="side-bar hidden md:grid">
-          <div className="grid grid-flow-col grid-cols-4 col-span-2 border border-border-main h-full">
-            <div className="about-sidebar border border-border-main p-5 col-span-1">
+        <div className="side-bar ">
+          <div className="grid grid-flow-col grid-cols-1 md:grid-cols-4 md:col-span-2 border border-border-main h-full">
+            <div className="about-sidebar border border-border-main p-5 col-span-1 hidden md:block">
               <div className="flex gap-9 flex-col justify-center items-center pt-4">
                 <CodeIcon className="cursor-pointer" />
                 <PersonalInfoIcon className="cursor-pointer" />
@@ -165,96 +165,28 @@ const Layout = ({
                   <summary className="border-b-2 border-border-main px-4 py-3">
                     {sidebarTitle1}
                   </summary>
-                  <div className="pt-4">
-                    <div>
-                      <details id="bio-details">
-                        <summary className="summary h-[25px] px-4 py-3">
-                          <span
-                            style={{
-                              display: 'flex',
-                              position: 'relative',
-                              top: '-20px',
-                              left: '18px',
-                              alignItems: 'center',
-                              gap: '6px',
-                            }}
-                          >
-                            <FileIcon /> Bio
-                          </span>
-                        </summary>
-                        {/* <div>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Obcaecati repellat nam
-                </div> */}
-                      </details>
-                    </div>
-                    <div>
-                      <details id="interestDetails">
-                        <summary className="summary h-[25px] px-4 py-3">
-                          <span
-                            style={{
-                              display: 'flex',
-                              position: 'relative',
-                              top: '-20px',
-                              left: '18px',
-                              alignItems: 'center',
-                              gap: '6px',
-                            }}
-                            className="text-text-main"
-                          >
-                            {' '}
-                            <FileIcon color={'#43D9AD'} />
-                            Interests
-                          </span>
-                        </summary>
-                        <div>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Obcaecati repellat nam
-                        </div>
-                      </details>
-                    </div>
-                    <div>
-                      <details id="educationDetails">
-                        <summary className="summary h-[25px] px-4 py-3">
-                          <span
-                            style={{
-                              display: 'flex',
-                              position: 'relative',
-                              top: '-20px',
-                              left: '18px',
-                              alignItems: 'center',
-                              gap: '6px',
-                            }}
-                            className="text-text-main"
-                          >
-                            <FileIcon color={'#3A49A4'} /> education
-                          </span>
-                        </summary>
-                        <div>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Obcaecati repellat nam
-                        </div>
-                      </details>
-                    </div>
-                  </div>
+                  {sidebarDetails1}
                 </details>
               </div>
-              <div>
-                <details className="border-b-2 border-border-main px-4 py-3">
-                  <summary className="text-white">{sidebarTitle2}</summary>
-                  <div>
-                    <span className="text-text-main flex gap-2">
-                      <MailIcon /> prabhattambe10@gmail.com
-                    </span>
-                    <span className="text-text-main flex gap-2">
-                      <PhoneIcon /> +91 845905292
-                    </span>
-                  </div>
-                </details>
-              </div>
+              {sidebarTitle2 && (
+                <div className="hidden md:block">
+                  <details className="border-b-2 border-border-main px-4 py-3">
+                    <summary className="text-white">{sidebarTitle2}</summary>
+                    <div>
+                      <span className="text-text-main flex gap-2">
+                        <MailIcon /> prabhattambe10@gmail.com
+                      </span>
+                      <span className="text-text-main flex gap-2">
+                        <PhoneIcon /> +91 845905292
+                      </span>
+                    </div>
+                  </details>
+                </div>
+              )}
             </div>
           </div>
         </div>
+        
         <div className="content">
           {/* <AboutPageContent /> */}
           <div className="top-bar border flex justify-start   border-border-main h-[50px] sticky top-0 z-10  backdrop-blur-3xl">

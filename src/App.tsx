@@ -13,6 +13,7 @@ import ContactIndex from './pages/Contact/ContactIndex';
 import Layout from './components/Layout';
 import ContactForm from './pages/Contact/ContactForm';
 import AboutPageContent from './pages/About/PageContent';
+import ProjectSidebar from './pages/Projects/ProjectSidebar';
 
 function App() {
   return (
@@ -47,7 +48,7 @@ function App() {
               content={<ProjectContent />}
               sidebarTitle1="_Projects"
               tabName="_projects"
-              sidebarDetails1={'_projects'}
+              sidebarDetails1={<ProjectSidebar />}
             />
           }
         />

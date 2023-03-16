@@ -330,6 +330,7 @@ h2 {
     grid-template-columns: 1fr;
     grid-template-areas:
         'header '
+        'nav'
         'content'
         'footer';
   }

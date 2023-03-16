@@ -38,7 +38,26 @@ const ProjectContent = () => {
               subhead={element?.language}
             />
           );
-        })}
+        }) ?? (
+          <>
+            {' '}
+            <ProjectCard
+              description="Loading..."
+              name="Loading.."
+              subhead="Loading.."
+            />
+            <ProjectCard
+              description="Loading..."
+              name="Loading.."
+              subhead="Loading.."
+            />
+            <ProjectCard
+              description="Loading..."
+              name="Loading.."
+              subhead="Loading.."
+            />
+          </>
+        )}
       </div>
     </>
   );
