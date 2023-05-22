@@ -14,6 +14,9 @@ import Layout from './components/Layout';
 import ContactForm from './pages/Contact/ContactForm';
 import AboutPageContent from './pages/About/PageContent';
 import ProjectSidebar from './pages/Projects/ProjectSidebar';
+import ContactSidebarMenu from './pages/Contact/ContactSidebarMenu';
+import AboutSidebar from './pages/About/AboutSidebar';
+import AboutSidebarDetails from './pages/About/AboutSidebarDetails';
 
 function App() {
   return (
@@ -38,6 +41,7 @@ function App() {
               content={<AboutPageContent />}
               sidebarTitle1="_personal-info"
               tabName="_personal-info"
+              sidebarDetails1={<AboutSidebarDetails />}
             />
           }
         />
@@ -59,8 +63,8 @@ function App() {
               content={<ContactForm />}
               sidebarTitle1="Contact"
               tabName="_Contact"
-              sidebarDetails1={'any'}
-              sidebarDetails2={'any'}
+              sidebarDetails1={<ContactSidebarMenu />}
+            // sidebarDetails2={''}
             />
           }
         />

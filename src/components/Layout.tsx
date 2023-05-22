@@ -36,9 +36,8 @@ const Layout = ({
       <div className="wrapper text-white">
         <header className="main-head">
           <nav
-            className={`md:relative w-full h-full md:grid grid-cols-6 border border-border-main ${
-              isOpen ? 'absolute z-30 bg-bg-main ' : 'bg-transparent z-0'
-            }`}
+            className={`md:relative w-full h-full md:grid grid-cols-6 border border-border-main ${isOpen ? 'absolute z-30 bg-bg-main ' : 'bg-transparent z-0'
+              }`}
           >
             <div className="md:col-span-1 items-center md:self-center flex justify-between p-4 border-r border-r-border-main">
               <h1 className="text-text-main text-left md:text-center w-full ">
@@ -56,49 +55,43 @@ const Layout = ({
             {isOpen && (
               <>
                 <div
-                  className={`col-span-4 transition-all duration-300 md:hidden ${
-                    isOpen ? '' : 'hidden'
-                  }`}
+                  className={`col-span-4 transition-all duration-300 md:hidden ${isOpen ? '' : 'hidden'
+                    }`}
                 >
                   <ul className="flex flex-col md:flex-row justify-start ">
                     <li
                       onClick={() => setIsOpen(false)}
-                      className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                        path === '/' ? 'border-b-yellow text-white' : ''
-                      }`}
+                      className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${path === '/' ? 'border-b-yellow text-white' : ''
+                        }`}
                     >
                       <Link to="/">_hello</Link>
                     </li>
                     <li
                       onClick={() => setIsOpen(false)}
-                      className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                        path === '/about' ? 'border-b-yellow text-white' : ''
-                      }`}
+                      className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${path === '/about' ? 'border-b-yellow text-white' : ''
+                        }`}
                     >
                       <Link to="/about">_about-me</Link>
                     </li>
                     <li
                       onClick={() => setIsOpen(false)}
-                      className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                        path === '/projects' ? 'border-b-yellow text-white' : ''
-                      }`}
+                      className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${path === '/projects' ? 'border-b-yellow text-white' : ''
+                        }`}
                     >
                       <Link to="/projects">_projects</Link>
                     </li>
                     <li
                       onClick={() => setIsOpen(false)}
-                      className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                        path === '/contact' ? 'border-b-yellow text-white' : ''
-                      }`}
+                      className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${path === '/contact' ? 'border-b-yellow text-white' : ''
+                        }`}
                     >
                       <Link to="/contact">_contact</Link>
                     </li>
                   </ul>
                 </div>
                 <div
-                  className={`py-4 px-6 border border-border-main transition-all duration-300 ${
-                    isOpen ? 'hidden' : ''
-                  }`}
+                  className={`py-4 px-6 border border-border-main transition-all duration-300 ${isOpen ? 'hidden' : ''
+                    }`}
                 >
                   <Link className="text-text-main  " to="/contact">
                     contact
@@ -112,25 +105,22 @@ const Layout = ({
               <ul className="flex flex-col md:flex-row justify-start">
                 <li
                   onClick={() => setIsOpen(false)}
-                  className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                    path === '/' ? 'border-b-yellow text-white' : ''
-                  }`}
+                  className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${path === '/' ? 'border-b-yellow text-white' : ''
+                    }`}
                 >
                   <Link to="/">_hello</Link>
                 </li>
                 <li
                   onClick={() => setIsOpen(false)}
-                  className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                    path === '/about' ? 'border-b-yellow text-white' : ''
-                  }`}
+                  className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${path === '/about' ? 'border-b-yellow text-white' : ''
+                    }`}
                 >
                   <Link to="/about">_about-me</Link>
                 </li>
                 <li
                   onClick={() => setIsOpen(false)}
-                  className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${
-                    path === '/projects' ? 'border-b-yellow text-white' : ''
-                  }`}
+                  className={`flex justify-start  md:justify-center items-center cursor-pointer text-text-main px-6 border border-border-main py-4 border-b-2 border-b-bg-main hover:border-b-yellow ${path === '/projects' ? 'border-b-yellow text-white' : ''
+                    }`}
                 >
                   <Link to="/projects">_projects</Link>
                 </li>
@@ -140,9 +130,8 @@ const Layout = ({
               className={`py-4 px-6 border border-border-main transition-all duration-300 hidden md:block`}
             >
               <Link
-                className={`text-text-main hover:border-b-yellow ${
-                  path === '/contact' ? 'border-b-yellow text-white' : ''
-                }`}
+                className={`text-text-main hover:border-b-yellow ${path === '/contact' ? 'border-b-yellow text-white' : ''
+                  }`}
                 to="/contact"
               >
                 contact
@@ -168,17 +157,12 @@ const Layout = ({
                   {sidebarDetails1}
                 </details>
               </div>
-              {sidebarTitle2 && (
+              {!!sidebarTitle2 && (
                 <div className="hidden md:block">
                   <details className="border-b-2 border-border-main px-4 py-3">
                     <summary className="text-white">{sidebarTitle2}</summary>
                     <div>
-                      <span className="text-text-main flex gap-2">
-                        <MailIcon /> prabhattambe10@gmail.com
-                      </span>
-                      <span className="text-text-main flex gap-2">
-                        <PhoneIcon /> +91 845905292
-                      </span>
+                      {sidebarDetails2}
                     </div>
                   </details>
                 </div>
@@ -186,8 +170,8 @@ const Layout = ({
             </div>
           </div>
         </div>
-        
-        <div className="content">
+
+        <div className="content overflow-x-hidden">
           {/* <AboutPageContent /> */}
           <div className="top-bar border flex justify-start   border-border-main h-[50px] sticky top-0 z-10  backdrop-blur-3xl">
             <div className="flex border-r border-r-border-main w-auto h-full justify-start px-6 items-center gap-4 relative">

@@ -137,7 +137,7 @@ export default function ContactForm() {
               </li>
               <li className="list-decimal">
                 <span className="text-main pl-4">date</span>:{' '}
-                <span className="text-yellow">"12-02-23"</span>
+                <span className="text-yellow">{`"${Date.now().toLocaleString()}"`}</span>
               </li>
               <li className="list-decimal">{'}'}</li>
               <li className="list-decimal"></li>

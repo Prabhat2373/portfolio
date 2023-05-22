@@ -1,42 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CodeBlock from '../../components/CodeBlock';
 import DetailsIcon from '../../components/icons/DetailsIcon';
 import FileIcon from '../../components/icons/FileIcon';
 import AboutContent from '../About/AboutContent';
 import StarIcon from '../../components/icons/StarIcon';
 import CloseIcon from '../../components/icons/CloseIcon';
+import { useLocation } from 'react-router-dom';
 
 const AboutPageContent = () => {
+  const { search } = useLocation();
+  const [tab, setTab] = useState('');
+  console.log('params', search?.split('=')[1]);
+  useEffect(() => {
+    setTab(search?.split('=')[1]);
+    console.log('parrr', search);
+  }, [search]);
+  console.log('tab', tab);
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-10">
         <div className="grid col-span-5 border border-border-main">
           <div className="">
             <div className="grid grid-flow-col grid-cols-12">
-              {/* <div className="numbers grid col-span-1">
-                                <div className="text-text-main flex flex-col items-center">
-                                    <span>1</span>
-                                    <span>2</span>
-                                    <span>3</span>
-                                    <span>4</span>
-                                    <span>5</span>
-                                    <span>6</span>
-                                    <span>7</span>
-                                    <span>8</span>
-                                    <span>9</span>
-                                    <span>10</span>
-                                    <span>11</span>
-                                    <span>12</span>
-                                    <span>13</span>
-                                    <span>14</span>
-                                    <span>15</span>
-                                    <span>16</span>
-                                    <span>17</span>
-                                    <span>18</span>
-                                </div>
-
-                            </div> */}
-              <AboutContent />
+           
+              {tab === 'info' ? (
+                <AboutContent />
+              ) : (
+                <div>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Nostrum delectus molestias animi rerum, adipisci sit corporis.
+                  Architecto, ad maiores pariatur quas corporis tenetur modi
+                  tempora fuga atque in. Repellat, necessitatibus.
+                </div>
+              )}
             </div>
           </div>
         </div>
